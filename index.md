@@ -7,7 +7,7 @@ title: Home
 
 Physics Graduate Student at Wake Forest University
 
-[Email](mailto:carldd25@wfu.edu) · [CV](/Dallon_Carlson_CV.pdf) · [GitHub](https://github.com/dallon-carlson) · [ORCID](#https://orcid.org/0009-0001-5881-1856)
+[Email](mailto:carldd25@wfu.edu) · [CV](/Dallon_Carlson_CV.pdf) · [GitHub](https://github.com/dallon-carlson) · [ORCID](https://orcid.org/0009-0001-5881-1856)
 
 ---
 
@@ -35,12 +35,11 @@ Developing and testing Bayesian statistical methods to identify periodic signatu
 
 ## CV
 
-[Download my CV (PDF)](/cv.pdf)
+[Download my CV (PDF)](/Dallon_Carlson_CV.pdf)
 
 ## Contact
 
 Department of Physics
-[University Name]
-[Address]
+[Wake Forest University]
 
-Email: your.email@university.edu
+Email: carldd25@wfu.edu

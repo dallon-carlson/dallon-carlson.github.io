@@ -13,17 +13,18 @@ Physics Graduate Student at Wake Forest University
 
 ## About
 
-I am a graduate student in physics working in the [Caitlin Witt] research group. My research focuses on Bayesian detection methods for supermassive black hole binary (SMBHB) signals in AGN time-domain survey data. I'm broadly interested in gravitational-wave astrophysics, statistical inference, and time-domain surveys of active galactic nuclei.
+I am a graduate student in physics working in the Caitlin Witt research group. My research focuses on Bayesian detection methods for supermassive black hole binary (SMBHB) signals in AGN time-domain survey data. I'm broadly interested in gravitational-wave astrophysics, statistical inference, and time-domain surveys of active galactic nuclei.
 
 ## Research
 
-**Detecting supermassive black hole binaries in quasar light curves**
+**Detecting supermassive black hole binaries in AGN light curves**
 Developing and testing Bayesian statistical methods to identify periodic signatures consistent with SMBHB candidates in large-scale time-domain photometric surveys, including injection-recovery simulations to characterize detection sensitivity and false-alarm rates.
 
 ## Publications
 
-- Author list. "Paper title." *Journal name*, Year. [[arXiv]](#) [[PDF]](#)
-- *(Add publications in reverse chronological order.)*
+- Elisabeth R. Adams; Brian Jackson; Amanda A. Sickafoose; Jeffrey P. Morgenthaler; Hannah Worters; Hailey
+Stubbers; Dallon Carlson et al. "Doomed Worlds. I. No New Evidence for Orbital Decay in a Long-term Survey of
+43 Ultrahot Jupiters." *PSJ*, 2024. [[arXiv]](#) [[PDF]](#)
 
 ## Talks & Posters
 

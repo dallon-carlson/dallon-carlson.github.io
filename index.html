@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallon Carlson — Physics</title>
+<meta name="description" content="Dallon Carlson — physics graduate student working on Bayesian detection of supermassive black hole binaries in quasar time-domain data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0e17;
+    --panel: #10151f;
+    --line: #202838;
+    --text: #dce3ec;
+    --muted: #7c8798;
+    --signal: #5bc8d9;
+    --signal-dim: rgba(91,200,217,0.35);
+    --warm: #e8a33d;
+    --radius: 3px;
+    --maxw: 760px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--signal); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover{ border-bottom-color: var(--signal); }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.5em 0;
+  }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  header.site{
+    padding: 28px 0 0 0;
+  }
+  header.site .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+  }
+  header.site .mark{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  header.site nav{
+    display: flex;
+    gap: 22px;
+    font-size: 15px;
+  }
+  header.site nav a{
+    color: var(--muted);
+    border-bottom: none;
+  }
+  header.site nav a:hover{ color: var(--text); }
+
+  .hero{
+    padding: 64px 0 40px 0;
+  }
+  .hero .kicker{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: var(--signal);
+    margin-bottom: 14px;
+  }
+  .hero h1{
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.15;
+    max-width: 14ch;
+  }
+  .hero p.role{
+    color: var(--muted);
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 46ch;
+  }
+
+  .wave{
+    margin: 36px 0 8px 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #0d1220 0%, #0a0e17 100%);
+    overflow: hidden;
+  }
+  .wave svg{ display: block; width: 100%; height: auto; }
+  .wave path.trace{
+    fill: none;
+    stroke: var(--signal);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    animation: draw 2.4s ease-out forwards;
+  }
+  .wave path.noise{
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+  @keyframes draw{
+    to{ stroke-dashoffset: 0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .wave path.trace{ animation: none; stroke-dashoffset: 0; }
+  }
+  .wave .caption{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 10px 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  section{
+    padding: 44px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type{ border-bottom: none; }
+
+  section .label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+
+  .about p{ max-width: 62ch; }
+
+  .project{
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .project:first-of-type{ border-top: none; }
+  .project svg{ width: 44px; height: 44px; flex-shrink: 0; }
+  .project h3{ font-size: 18px; margin-bottom: 6px; }
+  .project p{ color: var(--muted); margin: 0; max-width: 58ch; }
+
+  .pub-list{ list-style: none; margin: 0; padding: 0; }
+  .pub-list li{
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+  }
+  .pub-list li:first-child{ border-top: none; }
+  .pub-list .num{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .pub-list .cite{ color: var(--text); }
+  .pub-list .cite .venue{ color: var(--muted); }
+  .pub-list .links{ margin-top: 4px; font-size: 14px; }
+  .pub-list .links a{ margin-right: 14px; }
+  .pub-empty{ color: var(--muted); font-style: italic; }
+
+  .contact-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .contact-grid div{ min-width: 180px; }
+  .contact-grid .k{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  footer{
+    padding: 30px 0 50px 0;
+    color: var(--muted);
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 560px){
+    .project{ grid-template-columns: 36px 1fr; }
+    header.site .wrap{ flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <span class="mark">dallon-carlson.github.io</span>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" style="border-bottom: none; padding-bottom: 0;">
+    <div class="kicker">Physics — gravitational-wave &amp; time-domain astrophysics</div>
+    <h1>Dallon Carlson</h1>
+    <p class="role">Graduate student working on Bayesian methods for detecting supermassive black hole binaries hidden in quasar light curves and pulsar timing data.</p>
+
+    <div class="wave">
+      <svg viewBox="0 0 720 180" preserveAspectRatio="none" role="img" aria-label="Illustrative light curve showing a periodic signal embedded in stochastic noise">
+        <path class="noise" d="M0,90 L20,96 L40,84 L60,100 L80,88 L100,105 L120,92 L140,110 L160,95 L180,115 L200,98 L220,120 L240,102 L260,118 L280,100 L300,112 L320,96 L340,108 L360,90 L380,104 L400,86 L420,98 L440,80 L460,94 L480,76 L500,90 L520,72 L540,86 L560,68 L580,82 L600,64 L620,78 L640,60 L660,74 L680,58 L700,70 L720,55"/>
+        <path class="trace" d="M0,95 C40,60 60,60 100,95 C140,130 160,130 200,95 C240,60 260,60 300,95 C340,130 360,130 400,95 C440,60 460,60 500,95 C540,130 560,130 600,95 C640,60 660,60 700,95 L720,95"/>
+      </svg>
+      <div class="caption">simulated AGN light curve — periodic (CW) component + damped random walk noise</div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="label">01 — about</div>
+    <p>I'm a graduate student in physics, working in the [Group Name] research group at [Your University]. My work centers on statistical methods for finding faint periodic signals in noisy astrophysical time series — particularly candidate supermassive black hole binaries (SMBHBs) in quasar photometry, and the gravitational-wave background as seen through pulsar timing arrays.</p>
+    <p>I'm broadly interested in Bayesian inference, nested sampling, and what it takes to separate a real astrophysical signal from the stochastic variability that dominates these datasets.</p>
+  </section>
+
+  <section id="research">
+    <div class="label">02 — research</div>
+
+    <div class="project">
+      <svg viewBox="0 0 44 44" fill="none"><path d="M2,30 Q11,10 22,22 T42,14" stroke="#5bc8d9" stroke-width="2" stroke-linecap="round"/></svg>
+      <div>
+        <h3>SMBHB detection in quasar light curves</h3>
+        <p>An injection-recovery pipeline for identifying periodic (CW and sawtooth) signals against damped-random-walk AGN variability, using UltraNest nested sampling and survey cadences drawn from CRTS and LSST. Current work compares candidate waveform templates via Bayesian evidence to characterize detection sensitivity.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <svg viewBox="0 0 44 44" fill="none"><path d="M2,22 L10,18 L16,26 L22,12 L28,30 L34,16 L42,22" stroke="#e8a33d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <h3>Pulsar timing array analysis</h3>
+        <p>Recovering and characterizing a stochastic gravitational-wave background signal from NANOGrav pulsar timing residuals, using <code>enterprise</code>, <code>enterprise_extensions</code>, and <code>PTMCMCSampler</code> — spanning noise modeling, correlated-signal fitting, and MCMC diagnostics.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <svg viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="#3a4557" stroke-width="2" stroke-dasharray="3 4"/></svg>
+      <div>
+        <h3>Next project</h3>
+        <p>Add a short description here as new work develops.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="label">03 — publications</div>
+    <p class="pub-empty">No publications listed yet — add entries below as they become available.</p>
+    <ul class="pub-list">
+      <li>
+        <span class="num">01</span>
+        <div>
+          <div class="cite">Author list. "Paper title." <span class="venue">Journal name, Year.</span></div>
+          <div class="links"><a href="#">arXiv</a><a href="#">PDF</a></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="label">04 — contact</div>
+    <div class="contact-grid">
+      <div>
+        <div class="k">email</div>
+        <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+      </div>
+      <div>
+        <div class="k">github</div>
+        <a href="https://github.com/dallon-carlson">dallon-carlson</a>
+      </div>
+      <div>
+        <div class="k">cv</div>
+        <a href="/cv.pdf">download PDF</a>
+      </div>
+      <div>
+        <div class="k">department</div>
+        <span style="color:var(--muted)">Department of Physics<br>[University Name]</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">© 2026 Dallon Carlson</div>
+</footer>
+
+</body>
+</html>

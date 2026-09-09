@@ -186,20 +186,20 @@
   /* =========================================================
      HERO
      ========================================================= */
-/* Forces text and image side-by-side */
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 280px; /* Adjust 280px to make the image smaller/larger */
+    grid-template-columns: 1fr 280px;
     gap: 40px;
     align-items: center;
     width: 100%;
+    padding-right: 12% /* Pushes everything left, leaving margin on the far right */;
   }
   
-  /* Restricts the image size */
+  /* Align image to the start of its column */
   .hero-media {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .hero-img {
@@ -922,11 +922,12 @@
         </div>
     
         <div class="hero-media">
-          <img src="IMG_7188.JPG" alt="Dallon Carlson" class="hero-img">
+          <img src="IMG_0846.JPG" alt="Dallon Carlson" class="hero-img">
         </div>
     
       </div>
     </section>    
+    
     <!-- =====================================================
          ABOUT
          ===================================================== -->

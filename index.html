@@ -186,7 +186,33 @@
   /* =========================================================
      HERO
      ========================================================= */
-
+/* Forces text and image side-by-side */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px; /* Adjust 280px to make the image smaller/larger */
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Restricts the image size */
+  .hero-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-img {
+    width: 100%;
+    max-width: 280px; /* Max width constraint */
+    max-height: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
   .hero{
     min-height: 85vh;
 
@@ -879,22 +905,14 @@
     <section class="hero">
       <div class="hero-grid">
         
-        <!-- Left Column: Text Content -->
         <div class="hero-text">
           <div class="kicker">
             gravitational-wave &amp; time-domain astrophysics
           </div>
-    
-          <h1>
-            Dallon Carlson
-          </h1>
-    
+          <h1>Dallon Carlson</h1>
           <p class="role">
-            PhD student working on Bayesian methods for detecting
-            supermassive black hole binaries hidden in quasar
-            light curves and pulsar timing data.
+            PhD student working on Bayesian methods...
           </p>
-    
           <div class="hero-meta">
             <span>AGN variability</span>
             <span>Bayesian inference</span>
@@ -903,14 +921,12 @@
           </div>
         </div>
     
-        <!-- Right Column: Profile/Hero Image -->
         <div class="hero-media">
-          <img src="IMG_7188.JPG" alt="Dallon Carlson" class="hero-img">
+          <img src="profile.jpg" alt="Dallon Carlson" class="hero-img">
         </div>
     
       </div>
-    </section>
-    
+    </section>    
     <!-- =====================================================
          ABOUT
          ===================================================== -->

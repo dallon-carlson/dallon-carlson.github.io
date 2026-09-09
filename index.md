@@ -5,25 +5,20 @@ title: Home
 
 # Dallon Carlson
 
-Physics Graduate Student — [Your University Name]
+Physics Graduate Student at Wake Forest University
 
-[Email](mailto:your.email@university.edu) · [CV](/cv.pdf) · [GitHub](https://github.com/dallon-carlson) · [Google Scholar](#) · [ORCID](#)
+[Email](mailto:carldd25@wfu.edu) · [CV](/cv.pdf) · [GitHub](https://github.com/dallon-carlson) · [Google Scholar](#) · [ORCID](#https://orcid.org/0009-0001-5881-1856)
 
 ---
 
 ## About
 
-I am a graduate student in physics working in the [Group Name] research group. My research focuses on Bayesian detection methods for supermassive black hole binary (SMBHB) signals in quasar time-domain survey data. I'm broadly interested in gravitational-wave astrophysics, statistical inference, and time-domain surveys of active galactic nuclei.
+I am a graduate student in physics working in the [Caitlin Witt] research group. My research focuses on Bayesian detection methods for supermassive black hole binary (SMBHB) signals in AGN time-domain survey data. I'm broadly interested in gravitational-wave astrophysics, statistical inference, and time-domain surveys of active galactic nuclei.
 
 ## Research
 
 **Detecting supermassive black hole binaries in quasar light curves**
 Developing and testing Bayesian statistical methods to identify periodic signatures consistent with SMBHB candidates in large-scale time-domain photometric surveys, including injection-recovery simulations to characterize detection sensitivity and false-alarm rates.
-
-**Pulsar timing array analysis**
-Working with pulsar timing residual data to search for and characterize a stochastic gravitational-wave background signal, using Markov Chain Monte Carlo (MCMC) methods.
-
-*(Add more project descriptions here as your work develops.)*
 
 ## Publications
 

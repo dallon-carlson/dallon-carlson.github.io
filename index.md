@@ -7,7 +7,7 @@ title: Home
 
 Physics Graduate Student at Wake Forest University
 
-[Email](mailto:carldd25@wfu.edu) · [CV](/cv.pdf) · [GitHub](https://github.com/dallon-carlson) · [Google Scholar](#) · [ORCID](#https://orcid.org/0009-0001-5881-1856)
+[Email](mailto:carldd25@wfu.edu) · [CV](/Dallon_Carlson_CV.pdf) · [GitHub](https://github.com/dallon-carlson) · [ORCID](#https://orcid.org/0009-0001-5881-1856)
 
 ---
 
